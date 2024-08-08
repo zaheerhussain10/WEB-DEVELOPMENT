@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100px;
+    width: 100vh;
+    display:flex ;
+    justify-content:center ;
+    align-items: center;
+}
+
+.btn-pink{
+    background-color: #e84949;
+    padding: 0.8rem 2.3rem;
+    color: white;
+    font-size :25px;
+    box-shadow: 5px 5px 5px 2px #000000;
+    position: relative;
+    z-index: 1;
+
+}
+
+.btn-pink::before{
+    content:"" ;
+    background-color: #0a0000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 1s;
+    z-index: -1;
+
+}
+
+.btn-pink:hover::before{
+   transform: scaleX(1);
+
+
+}
